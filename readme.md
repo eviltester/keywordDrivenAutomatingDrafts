@@ -1,4 +1,4 @@
-Keyword driven testing example
+Keyword driven testing example Hobby Project
 
 - explain keyword driven testing with examples
 - explain basic parsing: interpreter, text adventures
