@@ -15,7 +15,8 @@ public class CanExecuteKeywords {
 
         List<String> keywordScriptList = new ArrayList();
 
-        keywordScriptList.add("open \t https://testpages.herokuapp.com/");
+        keywordScriptList.add("open \t chrome");
+        keywordScriptList.add("get \t https://testpages.herokuapp.com/");
         keywordScriptList.add("sleep \t 2000");
         keywordScriptList.add("close");
 
@@ -24,7 +25,7 @@ public class CanExecuteKeywords {
 
         KeywordScriptExecutor executor = new KeywordScriptExecutor().
                                                 execute(script);
-        
+
     }
 
 }
