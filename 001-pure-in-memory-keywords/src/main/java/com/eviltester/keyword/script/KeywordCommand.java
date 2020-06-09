@@ -38,4 +38,13 @@ public class KeywordCommand {
     public int countOfArguments() {
         return arguments.size();
     }
+
+    @Override
+    public String toString() {
+        String asString = command;
+        for(String arg : arguments){
+            asString = asString + " " + arg;
+        }
+        return asString;
+    }
 }
