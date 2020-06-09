@@ -8,7 +8,7 @@ public class KeywordCommandTest {
     @Test
     public void canParseTabDelimitedKeywordString(){
 
-        final KeywordCommand command = new KeywordCommand(
+        final KeywordCommand command = new KeywordCommand().parseTabDelimited(
                                     "get \t https://eviltester.com");
 
         Assertions.assertEquals("GET", command.getCommand());

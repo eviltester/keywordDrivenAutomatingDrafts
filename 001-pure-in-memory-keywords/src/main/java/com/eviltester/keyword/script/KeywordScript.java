@@ -11,7 +11,7 @@ public class KeywordScript {
         commands = new ArrayList<>();
 
         for(String scriptLine : keywordScriptList){
-            KeywordCommand command = new KeywordCommand(scriptLine);
+            KeywordCommand command = new KeywordCommand().parseTabDelimited(scriptLine);
             commands.add(command);
         }
 

@@ -8,9 +8,11 @@ public class KeywordCommand {
     String command;
     List<String> arguments;
 
-    public KeywordCommand(final String scriptLine) {
-
+    public KeywordCommand(){
         arguments=new ArrayList<>();
+    }
+
+    public KeywordCommand parseTabDelimited(final String scriptLine){
 
         // parse this using |\t
         final String[] words = scriptLine.split("\t");
@@ -24,7 +26,7 @@ public class KeywordCommand {
                 }
             }
         }
-
+        return this;
     }
 
     public String getCommand() {
