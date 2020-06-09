@@ -1,6 +1,7 @@
 package com.eviltester.keyword.initial;
 
 
+import com.eviltester.keyword.script.KeywordScript;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -11,12 +12,14 @@ public class CanExecuteKeywords {
     @Test
     public void canExecuteKeywords(){
 
-        List<String> keywordScript = new ArrayList();
+        List<String> keywordScriptList = new ArrayList();
 
-        keywordScript.add("open \t https://testpages.herokuapp.com/");
-        keywordScript.add("sleep \t 2000");
-        keywordScript.add("close");
+        keywordScriptList.add("open \t https://testpages.herokuapp.com/");
+        keywordScriptList.add("sleep \t 2000");
+        keywordScriptList.add("close");
 
+        KeywordScript script = new KeywordScript().
+                                        parse(keywordScriptList);
 
 
     }
