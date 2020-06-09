@@ -1,6 +1,7 @@
 package com.eviltester.keyword.initial;
 
 
+import com.eviltester.keyword.execution.KeywordScriptExecutor;
 import com.eviltester.keyword.script.KeywordScript;
 import org.junit.jupiter.api.Test;
 
@@ -21,7 +22,9 @@ public class CanExecuteKeywords {
         KeywordScript script = new KeywordScript().
                                         parse(keywordScriptList);
 
-
+        KeywordScriptExecutor executor = new KeywordScriptExecutor().
+                                                execute(script);
+        
     }
 
 }
