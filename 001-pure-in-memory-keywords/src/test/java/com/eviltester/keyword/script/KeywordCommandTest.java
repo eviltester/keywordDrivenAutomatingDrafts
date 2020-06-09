@@ -9,10 +9,10 @@ public class KeywordCommandTest {
     public void canParseTabDelimitedKeywordString(){
 
         final KeywordCommand command = new KeywordCommand().parseTabDelimited(
-                                    "get \t https://eviltester.com");
+                                    "get \t https://testpages.herokuapp.com/");
 
         Assertions.assertEquals("GET", command.getCommand());
-        Assertions.assertEquals("https://eviltester.com",
+        Assertions.assertEquals("https://testpages.herokuapp.com/",
                                     command.getArgument(0));
         Assertions.assertEquals(1, command.countOfArguments());
 
