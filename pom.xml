@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.eviltester</groupId>
+    <artifactId>drafts-project</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+
+    <modules>
+        <module>000-the-tech</module>
+        <module>001-pure-in-memory-keywords</module>
+        <module>002-text-file-scripts</module>
+        <module>003-excel-file-scripts</module>
+    </modules>
+
+</project>

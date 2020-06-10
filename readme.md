@@ -5,7 +5,7 @@ Keyword driven testing example Hobby Project
 - keyword driven pros, cons, gotchas
 - explain tech we are building on initially - code [x]
 - write a keyword driven testing example in code with no external files - code [x]
-- read the keywords from a file - tab delimited
+- read the keywords from a file - tab delimited - code [x]
 - read the keywords from an excel file using the excel library Apache POI
 - refactor code to use command pattern
 - add more 'commands'
