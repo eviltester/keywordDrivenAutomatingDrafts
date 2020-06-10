@@ -18,12 +18,15 @@ public class ClickCommand implements KeywordExecutor {
 
         String locator = command.getArgument(0);
 
+        By inputValue = By.cssSelector("input[value='" + locator + "']");
+
         // assume the locator is any of the following - link text, css selector, classname, id etc.
         // TODO: add a second parameter which defines TEXT, NAME, CSS, XPATH, ID etc.
         // TODO: have TIMEOUT-AFTER command to set the timeout for waiting
         final Boolean found = new WebDriverWait(driver, 10).until(
                 ExpectedConditions.or(
                         ExpectedConditions.elementToBeClickable(By.linkText(locator)),
+                        ExpectedConditions.elementToBeClickable(inputValue),
                         ExpectedConditions.elementToBeClickable(By.cssSelector(locator)),
                         ExpectedConditions.elementToBeClickable(By.className(locator)),
                         ExpectedConditions.elementToBeClickable(By.xpath(locator)),
@@ -35,6 +38,9 @@ public class ClickCommand implements KeywordExecutor {
         WebElement element = tryAndFindElement(driver, By.linkText(locator));
         if(element==null){
             element = tryAndFindElement(driver, By.cssSelector(locator));
+        }
+        if(element==null){
+            element = tryAndFindElement(driver, inputValue);
         }
         if(element==null){
             element = tryAndFindElement(driver, By.className(locator));
@@ -49,6 +55,7 @@ public class ClickCommand implements KeywordExecutor {
         if(element!=null){
             state.setLastElement(element);
             element.click();
+            return true;
         }
 
         return false;
