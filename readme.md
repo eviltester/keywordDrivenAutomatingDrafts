@@ -7,7 +7,7 @@ Keyword driven testing example Hobby Project
 - write a keyword driven testing example in code with no external files - code [x]
 - read the keywords from a file - tab delimited - code [x]
 - read the keywords from an excel file using the excel library Apache POI - code [x]
-- refactor code to use command pattern
+- refactor code to use command pattern - code [x]
 - add more 'commands'
 - adding assertions
 - logging and reporting
