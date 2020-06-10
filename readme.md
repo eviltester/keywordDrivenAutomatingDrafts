@@ -8,7 +8,7 @@ Keyword driven testing example Hobby Project
 - read the keywords from a file - tab delimited - code [x]
 - read the keywords from an excel file using the excel library Apache POI - code [x]
 - refactor code to use command pattern - code [x]
-- add more 'commands'
+- add more 'commands' - click, can see text, url contains
 - adding assertions
 - logging and reporting
 - data driven testing vs keyword driven
