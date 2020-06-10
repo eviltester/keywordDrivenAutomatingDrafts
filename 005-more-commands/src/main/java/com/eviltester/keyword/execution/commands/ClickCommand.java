@@ -47,6 +47,7 @@ public class ClickCommand implements KeywordExecutor {
         }
 
         if(element!=null){
+            state.setLastElement(element);
             element.click();
         }
 
