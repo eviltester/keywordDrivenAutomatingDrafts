@@ -1,37 +1,61 @@
 Keyword driven testing example Hobby Project
 
+Keyword Driven Testing Explained:
+
+- it's not testing, it's automating
 - explain keyword driven testing with examples
 - explain basic parsing: interpreter, text adventures
 - keyword driven pros, cons, gotchas
-- explain tech we are building on initially - code [x]
-- write a keyword driven testing example in code with no external files - code [x]
-- read the keywords from a file - tab delimited - code [x]
-- read the keywords from an excel file using the excel library Apache POI - code [x]
-- refactor code to use command pattern - code [x]
-- add more 'commands' - click, can see text, url contains
-- adding assertions
+- framework vs library explained
+- modelling, abstracting, domains and DSLs explained
+- desired tool support - code completion, why excel doesn't help, etc.
+
+Basic Home Grown Keyword Driven Framework:
+
+- explain tech we are building on initially - code [x] 000
+- write a keyword driven testing example in code with no external files - code [x] 001
+- read the keywords from a file - tab delimited - code [x] 002
+- read the keywords from an excel file using the excel library Apache POI - code [x] 003
+- refactor code to use command pattern - code [x] 004
+- add more 'commands' - click [x], alert handling [x] 005
+- adding assertions - can see text [x] 006
+- evaluation of the extras commands and assertions
+    - e.g. should it be alert \t cancel i.e. action as first param
+    - should it be check \t can see text
+    - should it be check \t [any command]
 - logging and reporting
 - data driven testing vs keyword driven
 - add data driven capabilities
 - refactor further to make easier to use library interface
 - wrap as a 'tool' i.e. main method
-- run all scripts from all sheets?
-- run all tab files in a 'suite' file or directory
+
+Existing Keyword Driven Frameworks:
+
 - existing keyword driven frameworks overview
 - Keywords are a basic DSL, Cucumber is not Keyword Driven
 - demo of robot framework
 - demo of katalon studio
 - demo of karate framework
 - advanced keyword driven concepts implemented in commercial and open source tooling
+- features you should look for (refer back to desired tool support earlier)
 
-Advanced?
+Advanced Features:
+
+- see what features in existing frameworks that we might want to approximate in 'advanced' to demystify
+- run all scripts from all sheets?
+- run all tab files in a 'suite' file or directory
+- named parameters for commands, default params
+- syntax checking
 - macro commands built on other commands
 - abstract tech - use JSoup, as well as WebDriver (showing differences)
-
+- using it as a library of commands to automate beyond the keywords
+- executor customisation e.g. pause between steps
+- 'it' i.e. find Element, add to 'it' in state, then allow check 'checkname' it
+- variables from attributes or text 
 
 Aims:
 
-- keep it short
-- keep it simple
+- keep sections short
+- keep examples simple
 - use basic classes and control structures to make it easier for people with other language experiences to understand
 - demystify
