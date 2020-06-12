@@ -23,8 +23,13 @@ Basic Home Grown Keyword Driven Framework:
     - e.g. should it be alert \t cancel i.e. action as first param
     - should it be check \t can see text
     - should it be check \t [any command] - left as todo in text, thought experiment
-    - pros: smaller command set, easy to expand in code    
-- logging and reporting
+    - pros: smaller command set, easy to expand in code
+- state clean up so no hanging browsers, single exception throwing, and stop on failed step etc. [x] 008   
+- logging [x] 009
+    - logging happens as we run
+- reporting
+    - different formats
+    - happens after we run
 - data driven testing vs keyword driven
 - add data driven capabilities
 - refactor further to make easier to use library interface

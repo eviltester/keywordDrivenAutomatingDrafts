@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CanExecuteKeywords {
+public class CanExecuteKeywordsTest {
 
     @Test
     public void canExecuteKeywords(){

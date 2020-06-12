@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CanExecuteKeywords {
+public class CanExecuteKeywordsTest {
 
     @Test
     public void canExecuteKeywords(){
@@ -19,14 +19,14 @@ public class CanExecuteKeywords {
         keywordScriptList.add("get \t https://testpages.herokuapp.com/");
         keywordScriptList.add("sleep \t 2000");
 
-//        keywordScriptList.add("click \t Table Test Page"); // text
-//        keywordScriptList.add("sleep \t 2000");
-//        keywordScriptList.add("click \t div.page-navigation > a"); // css
-//        keywordScriptList.add("sleep \t 2000");
-//        keywordScriptList.add("click \t basicpagetest"); // id
-//        keywordScriptList.add("sleep \t 2000");
-//        keywordScriptList.add("click \t Index"); // id
-//        keywordScriptList.add("sleep \t 2000");
+        keywordScriptList.add("click \t Table Test Page"); // text
+        keywordScriptList.add("sleep \t 2000");
+        keywordScriptList.add("click \t div.page-navigation > a"); // css
+        keywordScriptList.add("sleep \t 2000");
+        keywordScriptList.add("click \t basicpagetest"); // id
+        keywordScriptList.add("sleep \t 2000");
+        keywordScriptList.add("click \t Index"); // id
+        keywordScriptList.add("sleep \t 2000");
 
         // Alerts
         keywordScriptList.add("click \t Alerts (JavaScript)");

@@ -11,6 +11,9 @@
     <properties>
         <webdrivermanager.version>4.0.0</webdrivermanager.version>
         <junit.jupiter.version>5.6.2</junit.jupiter.version>
+        <selenium.webdriver.version>3.141.59</selenium.webdriver.version>
+        <maven-surefire-failsafe.version>2.22.2</maven-surefire-failsafe.version>
+        <apache-poi.version>4.1.2</apache-poi.version>
 
         <!-- configure the compiler plugin via properties rather than plugin -->
         <!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-source-and-target.html -->
@@ -20,42 +23,56 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${webdrivermanager.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>3.6.2</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
+            <version>${selenium.webdriver.version}</version>
             <scope>compile</scope>
         </dependency>
         <!-- https://poi.apache.org/ -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>4.1.2</version>
+            <version>${apache-poi.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>4.1.2</version>
+            <version>${apache-poi.version}</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>${junit.jupiter.version}</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
+
+    <!-- https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven -->
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-failsafe.version}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${maven-surefire-failsafe.version}</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

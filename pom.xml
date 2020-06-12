@@ -14,6 +14,13 @@
         <module>001-pure-in-memory-keywords</module>
         <module>002-text-file-scripts</module>
         <module>003-excel-file-scripts</module>
+        <module>004-command-pattern</module>
+        <module>005-more-commands</module>
+        <module>006-simple-assertions</module>
+        <module>007-command-implementation-evaluation</module>
+        <module>008-state-cleanup</module>
+        <module>009-logging</module>
     </modules>
+
 
 </project>
