@@ -20,6 +20,7 @@
         <module>007-command-implementation-evaluation</module>
         <module>008-state-cleanup</module>
         <module>009-logging</module>
+        <module>010-reporting</module>
     </modules>
 
 
