@@ -23,6 +23,7 @@ Basic Home Grown Keyword Driven Framework:
     - e.g. should it be alert \t cancel i.e. action as first param
     - should it be check \t can see text
     - should it be check \t [any command] - left as todo in text, thought experiment
+    - pros: smaller command set, easy to expand in code    
 - logging and reporting
 - data driven testing vs keyword driven
 - add data driven capabilities
