@@ -19,10 +19,10 @@ Basic Home Grown Keyword Driven Framework:
 - refactor code to use command pattern - code [x] 004
 - add more 'commands' - click [x], alert handling [x] 005
 - adding assertions - can see text [x] 006
-- evaluation of the extras commands and assertions
+- evaluation of the extras commands and assertions [x] 007
     - e.g. should it be alert \t cancel i.e. action as first param
     - should it be check \t can see text
-    - should it be check \t [any command]
+    - should it be check \t [any command] - left as todo in text, thought experiment
 - logging and reporting
 - data driven testing vs keyword driven
 - add data driven capabilities
@@ -41,6 +41,7 @@ Existing Keyword Driven Frameworks:
 
 Advanced Features:
 
+- assertions on any command - check \t true \t [any command] - need to pass in the keyword map, could use constructor to do this when adding to map
 - see what features in existing frameworks that we might want to approximate in 'advanced' to demystify
 - run all scripts from all sheets?
 - run all tab files in a 'suite' file or directory
