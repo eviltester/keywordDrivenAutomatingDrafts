@@ -27,10 +27,10 @@ Basic Home Grown Keyword Driven Framework:
 - state clean up so no hanging browsers, single exception throwing, and stop on failed step etc. [x] 008   
 - logging [x] 009
     - logging happens as we run
-- reporting
+- reporting [x] 010
     - different formats
     - happens after we run
-- data driven testing vs keyword driven
+- theory - data driven testing vs keyword driven
 - add data driven capabilities
 - refactor further to make easier to use library interface
 - wrap as a 'tool' i.e. main method

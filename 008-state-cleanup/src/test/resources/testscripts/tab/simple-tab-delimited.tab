@@ -1,0 +1,4 @@
+open	chrome
+get	https://testpages.herokuapp.com/
+sleep	2000
+close
