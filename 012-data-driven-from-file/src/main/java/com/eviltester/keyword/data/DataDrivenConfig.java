@@ -38,4 +38,17 @@ public class DataDrivenConfig {
     public Map<String, String> getDataEntries(final int dataLineIndex) {
         return nameValueEntries.get(dataLineIndex);
     }
+
+    public DataDrivenConfig parse(final List<String> lines) {
+        for(String line:lines){
+            if(line.trim().length()>0){
+                addTabDelimitedLine(line);
+            }
+        }
+        return this;
+    }
+
+    public void addMapAsLine(final Map<String, String> dataItems) {
+        nameValueEntries.add(dataItems);
+    }
 }
