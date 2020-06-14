@@ -24,6 +24,7 @@
         <module>011-data-driven</module>
         <module>012-data-driven-from-file</module>
         <module>013-main-entry-points</module>
+        <module>014-main-method-app</module>
     </modules>
 
 
