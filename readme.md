@@ -33,7 +33,7 @@ Basic Home Grown Keyword Driven Framework:
 - theory - data driven testing vs keyword driven
 - add data driven capabilities [x] 011
 - read data from file [x] 012
-- refactor further to make easier to use library interface
+- refactor further to make easier to use library interface from main 
 - wrap as a 'tool' i.e. main method
 
 Existing Keyword Driven Frameworks:

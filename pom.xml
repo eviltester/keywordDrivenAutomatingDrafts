@@ -21,6 +21,9 @@
         <module>008-state-cleanup</module>
         <module>009-logging</module>
         <module>010-reporting</module>
+        <module>011-data-driven</module>
+        <module>012-data-driven-from-file</module>
+        <module>013-main-entry-points</module>
     </modules>
 
 
