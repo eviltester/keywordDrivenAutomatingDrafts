@@ -1,5 +1,6 @@
 package com.eviltester.keyword.execution;
 
+import com.eviltester.keyword.data.DataDrivenConfig;
 import com.eviltester.keyword.execution.commands.*;
 import com.eviltester.keyword.execution.commands.alerts.*;
 import com.eviltester.keyword.execution.commands.assertions.AssertHandlingCommand;
@@ -54,6 +55,27 @@ public class KeywordScriptExecutor {
         commandHandlers.put("CAN SEE TEXT", new AssertTextExists());
     }
 
+    public KeywordScriptExecutor execute(final KeywordScript script, final DataDrivenConfig dataDriven) {
+
+        for(int dataLine=0; dataLine<dataDriven.countOfDataEntryLines(); dataLine++){
+
+            final KeywordScriptLog scriptLog = new KeywordScriptLog();
+
+            try {
+                KeywordScriptExecutor executor =
+                        new KeywordScriptExecutor(scriptLog).
+                                stopOnFailure().
+                                execute(script, dataDriven.getDataEntries(dataLine));
+            }catch(Exception e){
+                // prevent the app failing because we want to generate a report
+                log.debug("Script Execution Failed with Exception");
+            }
+
+            log.addScriptLog(scriptLog);
+        }
+
+        return this;
+    }
 
     public KeywordScriptExecutor execute(final KeywordScript script, final Map<String, String> dataEntries) {
 
