@@ -1,0 +1,10 @@
+open	chrome
+get	https://testpages.herokuapp.com/
+sleep	1000
+click	Alerts (JavaScript)
+check	false	can see text	{{alert-text-to-enter}}
+click	Show prompt box
+alert	input	{{alert-text-to-enter}}
+sleep	1000
+check	true	can see text	{{alert-text-to-enter}}
+close
